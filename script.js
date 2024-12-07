@@ -23,5 +23,17 @@ app.appendChild(logo);
 app.appendChild(container);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 fetch('http://cluebase.lukelav.in/clues')
 fetch('http://cluebase.lukelav.in/categories')
