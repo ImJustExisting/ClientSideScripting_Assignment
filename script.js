@@ -1,12 +1,3 @@
-/*
-    ENDPOINTS USED
-    Clues: http://cluebase.lukelav.in/clues
-    Categories: http://cluebase.lukelav.in/categories
-
-    use fetch function
-
-*/
-
 // Select the root element in the HTML where we will append our content
 const app = document.getElementById('root');
 
@@ -34,6 +25,10 @@ app.appendChild(container);
 
 
 
-
-fetch('http://cluebase.lukelav.in/clues')
-fetch('http://cluebase.lukelav.in/categories')
+Promise.all([
+    fetch('http://cluebase.lukelav.in/clues', ),
+    fetch('http://cluebase.lukelav.in/categories?limit=5')
+  ])
+    .then(handleResponse)
+    .then(handleData)
+    .catch(handleError);
