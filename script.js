@@ -26,9 +26,9 @@ app.appendChild(container);
 
 
 Promise.all([
-    fetch('http://cluebase.lukelav.in/clues', ),
-    fetch('http://cluebase.lukelav.in/categories?limit=5')
+    fetch('http://cluebase.lukelav.in/clues',{ mode: 'no-cors' }),
+    fetch('http://cluebase.lukelav.in/categories?limit=5',{ mode: 'no-cors' })
   ])
-    .then(handleResponse)
+    .then(res => res)
     .then(handleData)
     .catch(handleError);
